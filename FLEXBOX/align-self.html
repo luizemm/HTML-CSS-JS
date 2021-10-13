@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align-self</title>
+
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        .flex-container {
+            max-width: 350px;
+            display: flex;
+            margin-bottom: 10px;
+            border: 1px solid black;
+        }
+
+        .align-container {
+            align-items: flex-end;
+        }
+
+        .item {
+            background-color: darkblue;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .auto {
+            align-self: auto;
+        }
+
+        .center {
+            align-self: center;
+        }
+
+        .start {
+            align-self: flex-start;
+        }
+
+        .end {
+            align-self: flex-end;
+        }
+
+        .baseline {
+            align-self: baseline;
+        }
+
+        .stretch {
+            align-self: stretch;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>align-self</h1>
+    <p>auto (padrão)</p>
+    <section class="flex-container align-container">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Lorem ipsum dolor sit amet</div>
+        <div class="item auto">ITEM 4</div>
+    </section>
+
+    <p>row variado</p>
+    <section class="flex-container align-container">
+        <div class="item stretch">stretch</div>
+        <div class="item start">start</div>
+        <div class="item auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="item end">end</div>
+        <div class="item center">center</div>
+    </section>
+
+    <p>column variado</p>
+    <section class="flex-container align-container column">
+        <div class="item stretch">stretch</div>
+        <div class="item start">start</div>
+        <div class="item auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="item end">end</div>
+        <div class="item center">center</div>
+        <div class="item auto">auto</div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex-basis</title>
+
+    <style>
+        body {
+            color: black;
+            background-color: white;
+        }
+
+        .container {
+            max-width: 500px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .item {
+            background-color: coral;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .auto {
+            flex-basis: auto;
+        }
+
+        .zero {
+            flex-basis: 0;
+        }
+
+        .w150 {
+            flex-basis: 150px;
+        }
+
+        .w100 {
+            flex-basis: 100px;
+        }
+
+        .w50 {
+            flex-basis: 50px;
+        }
+
+        .w25 {
+            flex-basis: 25px;
+        }
+
+        .fg-0 {
+            flex-grow: 0;
+        }
+
+        .fg-1 {
+            flex-grow: 1;
+        }
+
+        .fg-2 {
+            flex-grow: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>FLEX-BASIS</h1>
+    <p>auto</p>
+    <div class="container">
+        <div class="item auto fg-1">AAAAAAA</div>
+        <div class="item auto fg-1">BBB</div>
+        <div class="item auto fg-1">C</div>
+        <div class="item auto fg-2">DEF</div>
+    </div>
+
+    <p>zero (0)</p>
+    <div class="container">
+        <div class="item zero fg-1">AAAAAAA</div>
+        <div class="item zero fg-1">BBB</div>
+        <div class="item zero fg-1">C</div>
+        <div class="item zero fg-1">DEF</div>
+    </div>
+
+    <p>basis + width + flex-grow</p>
+    <div class="container">
+        <div class="item w25 fg-1">AA</div>
+        <div class="item w150 fg-1">BBB</div>
+        <div class="item w25 fg-0">CCC</div>
+        <div class="item w25 fg-1">DEF</div>
+    </div>
+
+    <p>basis + width</p>
+    <div class="container">
+        <div class="item w25">AA</div>
+        <div class="item w100">BBB</div>
+        <div class="item w150">CCC</div>
+        <div class="item w50">DEF</div>
+    </div>
+</body>
+</html>

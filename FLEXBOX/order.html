@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - order</title>
+
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        .flex-container {
+            display: flex;
+            max-width: 300px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        .item {
+            flex: 1;
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            margin: 5px;
+        }
+
+        .o-2 {
+            order: -2;
+        }
+
+        .o-1 {
+            order: -1;
+        }
+
+        .o1 {
+            order: 1;
+        }
+
+        .o2 {
+            order: 2;
+        }
+
+        .o3 {
+            order: 3;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>order</h1>
+    <p>order: 0 (padrão)</p>
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">4a</div>
+        <div class="item">4b</div>
+    </div>
+
+    <p>row - order: diferente</p>
+    <div class="flex-container">
+        <div class="item o3">1</div>
+        <div class="item o2">4</div>
+        <div class="item o3">4a</div>
+        <div class="item o1">4b</div>
+    </div>
+
+    <p>column - order: diferente</p>
+    <div class="flex-container column">
+        <div class="item o3">1</div>
+        <div class="item o-1">4</div>
+        <div class="item o-2">4a</div>
+        <div class="item o1">4b</div>
+    </div>
+</body>
+</html>

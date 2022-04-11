@@ -1,0 +1,11 @@
+body{
+    background-color: bisque;
+}
+
+.imagemRandom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+}
